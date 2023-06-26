@@ -1,0 +1,15 @@
+.header{
+    height: 20%;
+    background-color: #fff;
+    display: block;
+    position: relative;
+}
+
+.header img{
+    justify-content: left;
+    margin-left: 80px;
+}
+
+img{
+    height: 8rem;
+}
