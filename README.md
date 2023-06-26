@@ -6,25 +6,11 @@ Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-c
 
 Execute o comando `ng serve` para iniciar um servidor de desenvolvimento. Acesse `http://localhost:4200/`. A aplicação será recarregada automaticamente se houver alterações nos arquivos de origem.
 
-## Scaffold de código
-
-Execute o comando `ng generate component nome-do-componente` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Execute o comando `ng build` para construir o projeto. Os artefatos de build serão armazenados no diretório `dist/`.
 
 ## Executando testes unitários
 
 Execute o comando `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
 
-## Executando testes end-to-end
-
-Execute o comando `ng e2e` para executar os testes end-to-end através de uma plataforma de sua escolha. Para usar este comando, você precisa primeiro adicionar um pacote que implementa capacidades de teste end-to-end.
-
-## Ajuda adicional
-
-Para obter mais ajuda sobre o Angular CLI, utilize o comando `ng help` ou consulte a página [Angular CLI Overview and Command Reference](https://angular.io/cli).
 
 # ChallengeFront
 
@@ -63,9 +49,7 @@ Para executar a aplicação localmente, siga estas etapas:
 1. Clone o repositório:
 
    ```bash
-   git
-
- clone https://github.com/ayrtonmonier/challenge-front.git
+   git clone https://github.com/ayrtonmonier/challenge-front.git
    ```
 
 2. Navegue até o diretório do projeto:
