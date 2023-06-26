@@ -1,20 +1,9 @@
 # ChallengeFront
 
+Este repositório contém os arquivos necessários para executar a aplicação front-end do projeto Challenge, desenvolvido utilizando o framework Angular.
+
 Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 16.1.1.
 
-## Servidor de desenvolvimento
-
-Execute o comando `ng serve` para iniciar um servidor de desenvolvimento. Acesse `http://localhost:4200/`. A aplicação será recarregada automaticamente se houver alterações nos arquivos de origem.
-
-
-## Executando testes unitários
-
-Execute o comando `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
-
-
-# ChallengeFront
-
-Este repositório contém os arquivos necessários para executar a aplicação front-end do projeto Challenge, desenvolvido utilizando o framework Angular.
 
 ## Estrutura do Projeto
 
@@ -86,6 +75,16 @@ Para utilizar os componentes de Header, Footer e Nav em sua aplicação, siga as
 
    Certifique-se de fornecer o caminho correto para o arquivo de componente em seu projeto.
 
+## Servidor de desenvolvimento
+
+Execute o comando `ng serve` para iniciar um servidor de desenvolvimento. Acesse `http://localhost:4200/`. A aplicação será recarregada automaticamente se houver alterações nos arquivos de origem.
+
+
+## Executando testes unitários
+
+Execute o comando `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
+
+
 ## Contribuição
 
 Se você deseja contribuir para o projeto, siga estas etapas:
@@ -116,4 +115,4 @@ Se você deseja contribuir para o projeto, siga estas etapas:
 
 ## Licença
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+Este projeto está licenciado sob a [Licença MIT](LICENCE).
