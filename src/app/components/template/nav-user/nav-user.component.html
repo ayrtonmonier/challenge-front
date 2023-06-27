@@ -1,0 +1,25 @@
+<mat-sidenav-container class="container-nav">
+  <mat-sidenav mode="side" opened class="side-nav">
+    <div class="block">
+      <h4 class="block-title">Filtrar por usuário:</h4>
+      <mat-radio-group class="vertical-radio-group">
+        <mat-radio-button class="custom-radio" value="especial" >Especial</mat-radio-button>
+        <mat-radio-button class="custom-radio" value="normal" >Normal</mat-radio-button>
+        <mat-radio-button class="custom-radio" value="trabalhoso" >Trabalhoso</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="block">
+      <h4 class="block-title">Filtrar por região:</h4>
+      <mat-radio-group class="vertical-radio-group">
+        <mat-radio-button class="custom-radio" value="norte" >Norte</mat-radio-button>
+        <mat-radio-button class="custom-radio" value="nordeste" >Nordeste</mat-radio-button>
+        <mat-radio-button class="custom-radio" value="centro-oeste" >Centro-Oeste</mat-radio-button>
+        <mat-radio-button class="custom-radio" value="sudeste" >Sudeste</mat-radio-button>
+        <mat-radio-button class="custom-radio" value="sul" >Sul</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

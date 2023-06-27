@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/views/home/home.component';
 import { UsersReadComponent } from './components/views/users-read/users-read.component';
+import { NavUserComponent } from './components/template/nav-user/nav-user.component';
 
 const routes: Routes = [
   {
@@ -9,8 +10,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'persons',
-    component: UsersReadComponent
+    path: 'users',
+    component: NavUserComponent
   }
 
 ];
