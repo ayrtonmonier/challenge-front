@@ -14,7 +14,7 @@ const routes: Routes = [
     children: [
       {
         path:'',
-        loadChildren: () => import('./components/views/user/user-listar/user-listar.module').then(modulo => modulo.UserListarModule)
+        loadChildren: () => import('./components/views/user/user-list/user-list.module').then(modulo => modulo.UserListModule)
       }
     ]
   }

@@ -13,7 +13,9 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  listar(): Observable<userModel.User[]>{
-    return this.httpClient.get<userModel.User[]>('${this.baseURL}/${this.endpoint}');
+
+  listar(): Observable<userModel.User[]> {
+    return this.httpClient.get<userModel.User[]>(`${this.baseUrl}/${this.endpoint}`);
   }
+  
 }

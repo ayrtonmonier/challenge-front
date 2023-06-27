@@ -15,8 +15,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { HomeComponent } from './components/views/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from "@angular/material/list";
-import { UserListarModule } from './components/views/user/user-listar/user-listar.module';
+import { UserListModule } from './components/views/user/user-list/user-list.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatProgressSpinnerModule, MatSpinner } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     MainNavComponent,
     NavUserComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -37,8 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatRadioModule,
     MatCardModule,
     MatListModule,
-    UserListarModule,
-    HttpClientModule
+    UserListModule,
+    HttpClientModule,
+    MatProgressSpinnerModule
 
   ],
   providers: [],
