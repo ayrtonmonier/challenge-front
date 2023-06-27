@@ -14,9 +14,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
 import { HomeComponent } from './components/views/home/home.component';
 import { MatCardModule } from '@angular/material/card';
-import { UsersReadComponent } from './components/views/users-read/users-read.component';
 import { MatListModule } from "@angular/material/list";
-
+import { UserListarModule } from './components/views/user/user-listar/user-listar.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,7 +27,6 @@ import { MatListModule } from "@angular/material/list";
     MainNavComponent,
     NavUserComponent,
     HomeComponent,
-    UsersReadComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +36,9 @@ import { MatListModule } from "@angular/material/list";
     MatSidenavModule,
     MatRadioModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    UserListarModule,
+    HttpClientModule
 
   ],
   providers: [],

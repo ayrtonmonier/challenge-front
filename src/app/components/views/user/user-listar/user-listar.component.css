@@ -1,0 +1,19 @@
+.card {
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .nome {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .endereco,
+  .cidade,
+  .estado {
+    margin-top: 20px;
+  }
+  
