@@ -53,36 +53,10 @@ Para executar a aplicação localmente, siga estas etapas:
    npm install
    ```
 
-## Utilização
-
-Para utilizar os componentes de Header, Footer e Nav em sua aplicação, siga as instruções abaixo:
-
-1. Importe os arquivos de componente necessários em seu código:
-
-   ```javascript
-   import { HeaderComponent } from 'caminho-para-o-arquivo/header.component';
-   import { FooterComponent } from 'caminho-para-o-arquivo/footer.component';
-   import { NavComponent } from 'caminho-para-o-arquivo/nav.component';
-   ```
-
-2. Use os componentes em sua estrutura de página:
-
-   ```html
-   <app-header></app-header>
-   <!-- Conteúdo da página -->
-   <app-footer></app-footer>
-   ```
-
-   Certifique-se de fornecer o caminho correto para o arquivo de componente em seu projeto.
 
 ## Servidor de desenvolvimento
 
 Execute o comando `ng serve` para iniciar um servidor de desenvolvimento. Acesse `http://localhost:4200/`. A aplicação será recarregada automaticamente se houver alterações nos arquivos de origem.
-
-
-## Executando testes unitários
-
-Execute o comando `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
 
 
 ## Contribuição
