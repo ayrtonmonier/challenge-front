@@ -1,11 +1,10 @@
 <div class="card-container" *ngIf="users$ | async as users; else carregando">
-    <div class="card" *ngFor="let user of users">
-      <img [src]="user.picture.large" alt="Imagem" width="180" height="180">
+    <div class="card" *ngFor="let user of users" (click)="showDetails(user)">
+      <img [src]="user.picture.medium" alt="Imagem" width="96" height="96">
       <h2 class="nome">{{ user.name.first }} {{ user.name.last }}</h2>
       <p class="endereco">{{ user.location.street }}, {{ user.location.postcode }}</p>
       <p class="cidade">{{ user.location.city }}</p>
-      <p class="estado">{{ user.location.state }} - {{ user.location.postcode }}</p>
-      <button (click)="showDetails(user)">Ver detalhes</button>
+      <p class="estado">{{ user.location.state }} - CEP: {{ user.location.postcode }}</p>
     </div>
   </div>
   

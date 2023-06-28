@@ -1,7 +1,7 @@
 .container-nav {
   position: relative;
-  height: 100%;
   display: block;
+  background: #f4f4f4;
 }
 
 .vertical-radio-group {
@@ -11,13 +11,14 @@
 
 .block-title {
   margin-bottom: 8px;
-
   font-size: 14px;
-  color: #fff;
+  color: #f4f4f4;
 }
 
 .side-nav {
-  padding: 10px;
+  background: #616161 ;
+  margin:0 !important;
+  padding: 20px ;
   width: 20%;
 }
 
@@ -32,6 +33,9 @@
   
 }
 
-.mat-radio-button ::ng-deep .mat-radio-label-content {
-  font-size: 12px;
+::ng-deep .custom-radio {
+  color: red;
 }
+
+
+

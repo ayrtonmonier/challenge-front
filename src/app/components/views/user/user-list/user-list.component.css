@@ -9,8 +9,14 @@
   width: 200px;
   padding: 10px;
   margin: 10px;
-  border: 1px solid #ccc;
+  background: #ededed;
   border-radius: 5px;
+  color: #949494;
+  padding:25px;
+}
+
+.card img{
+  border-radius: 8px;
 }
 
 .modal {
@@ -35,7 +41,7 @@
 }
 
 .nome {
-  font-weight: bold;
+  color: #616060;
   margin-top: 10px;
 }
 
