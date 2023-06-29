@@ -1,34 +1,38 @@
-<div class="card-container" *ngIf="users$ | async as users; else carregando">
-    <div class="card" *ngFor="let user of users" (click)="showDetails(user)">
-      <img [src]="user.picture.medium" alt="Imagem" width="96" height="96">
-      <h2 class="nome">{{ user.name.first }} {{ user.name.last }}</h2>
-      <p class="endereco">{{ user.location.street }}, {{ user.location.postcode }}</p>
-      <p class="cidade">{{ user.location.city }}</p>
-      <p class="estado">{{ user.location.state }} - CEP: {{ user.location.postcode }}</p>
+<div class="card-container" *ngIf="(users$ | async) as users; else carregando">
+  <div class="card" *ngFor="let user of users" (click)="showDetails(user)">
+    <img [src]="user.picture.medium" alt="Imagem" width="96" height="96">
+    <h2 class="nome">{{ user.name.first }} {{ user.name.last }}</h2>
+    <p class="endereco">{{ user.location.street }}, {{ user.location.postcode }}</p>
+    <p class="cidade">{{ user.location.city }}</p>
+    <p class="estado">{{ user.location.state }} - CEP: {{ user.location.postcode }}</p>
+  </div>
+</div>
+
+<mat-paginator [length]="totalUsers"
+               [pageSize]="pageSize"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="onPageChange($event)">
+</mat-paginator>
+
+<ng-container *ngIf="selectedUser; else carregando">
+  <div class="modal">
+    <div class="modal-content">
+      <img [src]="selectedUser.picture.large" alt="Imagem" width="300" height="300">
+      <h2>Detalhes do Usuário</h2>
+      <div class="column">
+        <p><strong>ID:</strong> {{ selectedUser.id }}</p>
+        <p><strong>Título:</strong> {{ selectedUser.name.title }}</p>
+        <p><strong>Nome:</strong> {{ selectedUser.name.first }}</p>
+        <p><strong>Sobrenome:</strong> {{ selectedUser.name.last }}</p>
+        <p><strong>Endereço:</strong> {{ selectedUser.location.street }}, {{ selectedUser.location.postcode }}</p>
+        <p><strong>Cidade:</strong> {{ selectedUser.location.city }}</p>
+        <p><strong>Estado:</strong> {{ selectedUser.location.state }} - {{ selectedUser.location.postcode }}</p>
+      </div>
+      <button (click)="closeModal()">Fechar</button>
     </div>
   </div>
-  
-  <ng-container *ngIf="selectedUser; else carregando">
-    <div class="modal">
-      <div class="modal-content">
-        <img [src]="selectedUser.picture.large" alt="Imagem" width="300" height="300">
-        <h2>Detalhes do Usuário</h2>
-        <div class="column">
-          <p><strong>ID:</strong> {{ selectedUser.id }}</p>
-          <p><strong>Título:</strong> {{ selectedUser.name.title }}</p>
-          <p><strong>Nome:</strong> {{ selectedUser.name.first }}</p>
-          <p><strong>Sobrenome:</strong> {{ selectedUser.name.last }}</p>
-          <p><strong>Endereço:</strong> {{ selectedUser.location.street }}, {{ selectedUser.location.postcode }}</p>
-          <p><strong>Cidade:</strong> {{ selectedUser.location.city }}</p>
-          <p><strong>Estado:</strong> {{ selectedUser.location.state }} - {{ selectedUser.location.postcode }}</p>
-        </div>
-        <button (click)="closeModal()">Fechar</button>
-      </div>
-    </div>
-  </ng-container>
-  
-  <ng-template #carregando>
-    <div class="loading-container">
-    </div>
-  </ng-template>
-  
+</ng-container>
+
+<ng-template #carregando>
+  <div class="loading-container"></div>
+</ng-template>

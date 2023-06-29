@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from '../user.model';
+import { Observable, of } from 'rxjs';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-user-list',
@@ -9,39 +10,38 @@ import { User } from '../user.model';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  users$: Observable<User[]> = of([]);
+  users$!: Observable<User[]>;
   selectedUser: User | null = null;
-
-  @ViewChild('modal') modalTemplate!: TemplateRef<any>;
+  totalUsers = 0;
+  pageSize = 10;
+  pageSizeOptions: number[] = [5, 10, 25, 100];
 
   constructor(private userService: UserService) { }
 
-  ngOnInit() {
-    this.listarUsers();
+  ngOnInit(): void {
+    this.fetchUsers();
   }
 
-  listarUsers() {
-    this.userService.listar().subscribe(
-      (response: any) => {
-        this.users$ = of(response.users);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+  fetchUsers(pageIndex: number = 0, pageSize: number = this.pageSize): void {
+    this.userService.listar(pageIndex, pageSize).subscribe(response => {
+      this.users$ = of(response.users);
+      this.totalUsers = response.totalCount;
+    });
   }
+  
+  
 
-  showDetails(user: User) {
+  showDetails(user: User): void {
     this.selectedUser = user;
-    this.openModal();
   }
 
-  openModal() {
-    // Lógica para abrir o modal
-  }
-
-  closeModal() {
-    // Lógica para fechar o modal
+  closeModal(): void {
     this.selectedUser = null;
+  }
+
+  onPageChange(event: PageEvent): void {
+    const pageIndex = event.pageIndex;
+    const pageSize = event.pageSize;
+    this.fetchUsers(pageIndex, pageSize);
   }
 }
